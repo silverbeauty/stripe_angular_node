@@ -1,0 +1,135 @@
+#charity-details {
+    .related-charities {
+        margin-bottom: 45px;
+    }
+}
+#charity-details .hero-charity {
+    height: 25vw;
+    /* background-image: url(./assets/images/charity-details-hero.jpg); */
+    background-position: center 20%;
+    background-size: cover;
+    margin-bottom: 7vw;
+    position: relative;
+}
+
+#charity-details .hero-charity .logo {
+    position: absolute;
+    overflow: hidden;
+    width: 10vw;
+    height: 10vw;
+    /* background-image: url(./assets/images/charity-details_square-logo.png); */
+    background-size: cover;
+    bottom: -5vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-indent: -10rem;
+    filter: drop-shadow(-2px 2px 4px #000000);
+}
+
+#charity-details .charity-overview .category {
+    font-size: 1.25rem;
+    color: #333333;
+    margin-bottom: 1.75rem;
+}
+
+#charity-details .charity-overview .category .divide {
+    margin: auto 0.5rem;
+    color: #b0afaf;
+}
+
+#charity-details .charity-overview .category .highlight {
+    color: #f3052c;
+}
+
+#charity-details .charity-overview .name {
+    color: #0004d0;
+}
+
+#charity-details .charity-text {
+    font-size: 1.25rem;
+    color: #000;
+}
+
+#charity-details .charity-text p:last-of-type {
+    margin-bottom: 4rem;
+}
+
+#charity-details .charity-text .media-container {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+#charity-details .charity-text .media-container img {
+    width: 100%;
+    height: auto;
+}
+
+#charity-details .charity-testimonial {
+    // height: 20vw;
+    background-color: #faf8f8;
+    color: #0872ba;
+    margin-bottom: 4rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#charity-details .charity-testimonial .row {
+    height: 100%;
+}
+
+#charity-details .charity-testimonial p {
+    color: #333;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    color: #0872ba;
+}
+
+#charity-details .charity-testimonial .testimonial-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: block;
+    color: #074c7a;
+    text-align: center;
+}
+
+#charity-details .charity-testimonial .testimonial-city {
+    font-style: italic;
+    color: #074c7a;
+    text-align: center;
+    display: block;
+}
+
+#charity-details .news .row.justify-content-center {
+    margin-bottom: 2rem;
+}
+
+#charity-details .news h3 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#charity-details .news img {
+    width: 100%;
+    height: auto;
+}
+
+#charity-details .news p {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+#charity-details .news a.read-more {
+    color: #074c7a;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+#charity-details .news div.row:last-of-type {
+    margin-bottom: 6rem;
+}
+
+#charity-details .hero-charities {
+    background-color: #faf8f8;
+}

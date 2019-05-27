@@ -1,0 +1,38 @@
+<main>
+  <div class="row justify-content-center login-form">
+    <div class="col-sm-12 col-md-4">
+      <h1>Login</h1>
+      <p>Please enter your email and password</p>
+  
+      <form [formGroup]="loginForm"
+            id="loginForm"
+            (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email Address" formControlName="email" required>
+        </div>
+
+        <div class="form-group">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password" formControlName="password" required>
+        </div>
+
+        <div class="forgot">
+          <!-- <a href="reset.html">Forgot password?</a> -->
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">
+          <fa-icon *ngIf="submitted" [icon]="faSpinner" [spin]="true" class="mr-2"></fa-icon>
+          <span>Login</span>
+        </button>
+
+         <div *ngIf="failedLogin" class="alert alert-danger" role="alert">
+          <strong>{{ errorMessage }}</strong>
+        </div>
+
+        <button type="button" class="btn btn-primary" (click)="goPasswordlessLogin()">Email Link Login</button>
+
+      </form>
+
+      <p style="color: #000000">New user? <a routerLink="/signup">Sign up here.</a></p>
+    </div>
+  </div>
+</main>

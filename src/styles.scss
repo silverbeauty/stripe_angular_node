@@ -1,0 +1,174 @@
+@import url(../node_modules/bootstrap/dist/css/bootstrap.min.css);
+
+@font-face {
+    /* Open Sans Light */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url("./assets/fonts/OpenSans/Light/OpenSans-Light.eot");
+    src: local("Open Sans Light"), local("OpenSans-Light"), url("./assets/fonts/OpenSans/Light/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/OpenSans/Light/OpenSans-Light.woff") format("woff"), url("./assets/fonts/OpenSans/Light/OpenSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+    /* Open Sans Light Italic */
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 300;
+    src: url("./assets/fonts/OpenSans/LightItalic/OpenSans-LightItalic.eot");
+    src: local("Open Sans Light Italic"), local("OpenSansLight-Italic"), url("./assets/fonts/OpenSans/LightItalic/OpenSans-LightItalic.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/OpenSans/LightItalic/OpenSans-LightItalic.woff") format("woff"), url("./assets/fonts/OpenSans/LightItalic/OpenSans-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+    /* Open Sans Regular */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url("./assets/fonts/OpenSans/Regular/OpenSans-Regular.eot");
+    src: local("Open Sans Regular"), local("OpenSans-Regular"), url("./assets/fonts/OpenSans/Regular/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/OpenSans/Regular/OpenSans-Regular.woff") format("woff"), url("./assets/fonts/OpenSans/Regular/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    /* Open Sans Italic */
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url("./assets/fonts/OpenSans/Italic/OpenSans-Italic.eot");
+    src: local("Open Sans Italic"), local("OpenSans-Italic"), url("./assets/fonts/OpenSans/Italic/OpenSans-Italic.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/OpenSans/Italic/OpenSans-Italic.woff") format("woff"), url("./assets/fonts/OpenSans/Italic/OpenSans-Italic.ttf") format("truetype");
+}
+
+@font-face {
+    /* Open Sans Bold */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url("./assets/fonts/OpenSans/Bold/OpenSans-Bold.eot");
+    src: local("Open Sans Bold"), local("OpenSans-Bold"), url("./assets/fonts/OpenSans/Bold/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/OpenSans/Bold/OpenSans-Bold.woff") format("woff"), url("./assets/fonts/OpenSans/Bold/OpenSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    /* Open Sans Bold Italic */
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: url("./assets/fonts/OpenSans/BoldItalic/OpenSans-BoldItalic.eot");
+    src: local("Open Sans Bold Italic"), local("OpenSans-BoldItalic"), url("./assets/fonts/OpenSans/BoldItalic/OpenSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/OpenSans/BoldItalic/OpenSans-BoldItalic.woff") format("woff"), url("./assets/fonts/OpenSans/BoldItalic/OpenSans-BoldItalic.ttf") format("truetype");
+}
+
+/* ########## Fonts ########## */
+
+/*
+    Montserrat-Bold 700
+    Montserrat-LightItalic 300
+    Montserrat-Regular 400
+    Nunito-Black 900
+    Nunito-Bold 700
+    Nunito-ExtraBold 800
+    Nunito-ExtraBoldItalic 800
+    Nunito-Italic 400
+    Nunito-Light 300
+    Nunito-Regular 400
+    Nunito-SemiBold 600
+*/
+
+/*
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+*/
+
+@font-face {
+    /* Nunito-Bold */
+    font-family: 'Nunito';
+    font-style: normal;
+    src: url("./assets/fonts/Nunito/Nunito-Bold.ttf");
+    src: local("Nunito Bold"), local("Nunito-Bold"), url("./assets/fonts/Nunito/Nunito-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    /* Montserrat-Bold */
+    font-family: Montserrat;
+    src: url("./assets/fonts/montserrat/Montserrat-Bold.otf") format("opentype");
+}
+
+// Variables
+$primary-color: #0872BA;
+$secondary-color: #0004d0;
+
+/* ########## Global: Start ########## */
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+main {
+    margin-top: 80px;
+    width: 100%;
+}
+
+.jumbotron {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.arrow-right {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+/* ########## Global: End ########## */
+.color-primary {
+    color: $primary-color;
+}
+.color-secondary {
+    color: $secondary-color;
+}
+.btn-allgive-primary {
+    padding: 15px 30px;
+    color: white;
+    border-radius: 0;
+    background: #2fa4f3;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    &:hover {
+        color: white;
+        background-color: #5fb9f6;
+    }
+}
+
+#page-wrapper .text.page-text {
+    font-size: 1.25rem;
+    color: #000;
+}
+
+#page-wrapper .text h1 {
+    color: #000000;
+}
+
+// Payment Modal Styles
+.modal {
+    font-family: 'Nunito', sans-serif;
+    .modal-title {
+        color: $secondary-color;
+    }
+    .modal-footer {
+        padding: 0;
+        button {
+            width: 100%;
+            background-color: $primary-color;
+            border: none;
+            padding: 15px;
+            color: white;
+        }
+    }
+    .back {
+        background-color: transparent;
+        border: 0;
+        -webkit-appearance: none;
+    }
+}

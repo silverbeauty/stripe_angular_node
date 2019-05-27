@@ -1,0 +1,35 @@
+.title {
+    color: #0872ba;
+    margin-bottom: 30px;
+}
+.carousel-wrapper {
+    position: relative;
+}
+.wrapper {
+    margin: 0 100px;
+}
+.carousel-item.active {
+    display: flex;
+    cursor: pointer;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 22px;
+    height: 40px;
+    background-image: url(../../../assets/images/carousel-arrow.png);
+    opacity: 0.666;
+    &:hover {
+        opacity: 1;
+    }
+}
+.carousel-control-next-icon {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.carousel-control-prev, .carousel-control-next {
+    width: 8vw;
+    opacity: 1;
+    background-color: #fff;
+    &:hover {
+        opacity: 1;
+    }
+}

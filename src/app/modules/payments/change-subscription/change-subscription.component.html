@@ -1,0 +1,44 @@
+
+<div class="charity-manage modal-content">
+  <div class="card">
+    <div class="row no-gutters">
+      <div class="col-12">
+        <div class="charity-manage-detail">
+          <!-- <button type="button" class="btn-close text-left" aria-label="Close" (click)="hideModal()">
+            <span aria-hidden="true">&times;</span>
+          </button> -->
+          <div class="text-center">
+            <p>You’ve raised a total of <strong>{{ choosedOrg.amount  | currency:'USD':'symbol':'.2-2'}}</strong> since {{choosedOrg.invoices[0].created * 1000 | date:'LLLL'}} <strong>{{choosedOrg.invoices[0].created * 1000 | date:'y'}}</strong> for the:</p>
+            <h1 class="text-white">{{ choosedOrg.name }}</h1>
+          </div>
+          <div class="donation-dropdown-wrapper text-center">
+            <span class="glyphicon glyphicon-question-sign"></span>
+            <div ngbDropdown>
+              <button class="btn btn-outline-primary" id="donationByDay111" ngbDropdownToggle>
+                <span class="h1">
+                  <sup>$</sup>{{ choosedOrg.amount }}.00 <span class="text-secondary">|</span>
+                  </span><span class="h3"><span class="text-dark">every</span> {{ choosedOrg.schedule }}</span>
+              </button>
+              <div ngbDropdownMenu aria-labelledby="donationByDay111">
+                <button (click)="selectDonate(2, 'day')">$2/day</button>
+                <button (click)="selectDonate(10, 'week')">$10/week</button>
+                <button (click)="selectDonate(50, 'month')">$50/month</button>
+              </div>
+            </div>
+            <p class="pointer" (click)="openCustomDonationModal()">SEE OTHER DONATION SUGGESTIONS</p>
+            <p class="pointer text-danger" (click)="cancelDonation()">Cancel This Donation</p>
+          </div>
+          <div class="text-center">
+            <p>via your Visa ending in <strong>{{last4}}</strong></p>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-cancel" (click)="hideModal()">CANCEL</button>
+            <button class="btn btn-save" (click)="updateSchedule()">
+                {{ isSaving ? 'SAVING...' : 'SAVE CHANGES' }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- Charity Manage Popup End -->

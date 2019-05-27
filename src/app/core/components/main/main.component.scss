@@ -1,0 +1,199 @@
+.hero-sacrifice {
+    background-color: white;
+    color: #000;
+    padding: 3vw 0;
+}
+
+.hero-sacrifice .container,
+.hero-sacrifice .row {
+    height: 100%;
+}
+
+.hero-sacrifice h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-sacrifice p {
+    font-size: 1.5rem;
+}
+
+.hero-works {
+    background-color: #058cb3;
+    background-image: url(../../../../assets/images/home_third_ipad.png);
+    background-repeat: no-repeat;
+    background-position: 100px 80px;
+    background-size: 50% auto;
+    padding: 5vw 0;
+}
+.hero-works h1 {
+    margin-bottom: 1.5rem;
+}
+.hero-works p {
+    font-size: 1.5rem;
+    margin-bottom: 1.75rem;
+    line-height: 1.75rem;
+}
+.hero-works .button {
+    width: 10rem;
+    height: 3rem;
+    border: 1px solid white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 3rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+.hero-adds {
+    background-color: white;
+    padding: 3vw 0;
+}
+.hero-adds h4 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    color: #333;
+    text-align: center;
+}
+.hero-adds p {
+    color: #333;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.hero-charities .carousel-charities .card span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    display: block;
+    text-align: center;
+    line-height: 15vw;
+}
+
+.card-body.card-logo {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-adds {
+    background-color: white;
+}
+
+.hero-adds h4 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    color: #333;
+    text-align: center;
+}
+
+.hero-adds p {
+    color: #333;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.hero-charities {
+    padding: 3vw 0;
+    background-color: white;
+    h1 {
+        color: #0872ba;
+        text-align: center;
+        line-height: 5vw;
+        margin-bottom: 30px;
+    }
+    .view-all {
+        color: #0872ba;
+        text-align: center;
+        width: 100%;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        height: 5vw;
+        margin-top: 40px;
+        a {
+            color: #0872ba;
+            &:hover {
+                color: #0872ba;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-works {
+        background-position: 100px 30px;
+        background-size: 40% auto;
+    }
+}
+@media (max-width: 992px) {
+    .hero-works {
+        background-position: 45px 50px;
+        background-size: 40% auto;
+    }
+    .hero-sacrifice .container {
+        max-width: 100%;
+    }
+   .hero-sacrifice .container h1{
+        max-width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .hero-works {
+        background-position: 45px 85px;
+    }
+    .hero-works .container {
+        max-width: 100%;
+    }
+    .hero-sacrifice .container h1{
+        font-size: 25px;
+    }
+    .hero-sacrifice .container p{
+        font-size: 18px;
+    }
+    .hero-testimonials .card .card-body {
+        font-size: 25px;
+    }
+}
+/* Styles for mobile devices */
+@media (max-width: 576px) {
+    .hero-sacrifice {
+        text-align: center;
+    }
+    .hero-works h1, .hero-charities h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+    .hero-works p, .hero-testimonials p, .hero-adds p {
+        font-size: 22px;
+        text-align: center;
+    }
+    .hero-works {
+        height: 500px;
+        background-position: 60px 27px;
+        background-size: 68% auto;
+    }
+    .hero-works .row {
+        height: 100%;
+        padding-top: 220px;
+    }
+    .hero-works .button {
+        margin: 10px auto;
+    }
+    .hero-testimonials, .row.testimonial-card, .hero-adds, .hero-adds .row {
+        height: 100%;
+    }
+    .hero-adds h4 {
+        margin: 5px auto 15px;
+    }
+}

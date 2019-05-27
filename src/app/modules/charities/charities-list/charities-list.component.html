@@ -1,0 +1,44 @@
+<main role="main">
+
+  <div class="jumbotron">
+    <div class="container pt-5 pb-5">
+      <h3 class="display-5 text-dark">Here are the all charities currently supported on the AllGive platform.</h3>
+      <p class="lead text-dark">Select one to view more information about its mission and start donating. Check back often as we are always adding new charities. Use the search box or drop-down to filter the list.</p>
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="filterDropdown" ngbDropdownToggle>{{ activeCategory }}</button>
+        <div ngbDropdownMenu aria-labelledby="filterDropdown">
+          <button class="dropdown-item" (click)="getAllCharities()">All</button>
+          <button class="dropdown-item" *ngFor="let category of categories" (click)="getCharitiesByCategory(category?.sys.id)">{{ category.fields.categoryName }}</button>
+        </div>
+      </div>
+      <div class="d-inline-block">
+        <input type="text" class="form-control search-input" placeholder="Search for name" (input)="onSearchCharity($event.target.value)">
+      </div>
+    </div>
+  </div>
+
+  
+  <section class="charity-grid">
+    <div class="row m-0">
+      <div class="card-wrapper col-6 col-md-3" *ngFor="let charity of filteredCharities">
+        
+        <div class="card">
+          <!-- <a href="#" [routerLink]="['/charities', charity.fields.slug]"> -->
+            <a href="#" [routerLink]="['/', charity.fields.slug]">
+            <div class="card-image">
+              <div class="card-cover" [style.backgroundImage]="'url(' + charity?.fields.coverImage.fields.file.url +')'"></div>
+              <div class="card-charity-text">
+                <div class="card-urgent" *ngIf="charity?.fields.urgent">Urgent help is needed!</div>
+                <div class="charity-name">{{ charity?.fields.charityName }}</div>
+                <div class="charity-brief-description">{{ charity?.fields.briefDescription }}</div>
+                <div class="card-cta">Learn more or take action</div>
+              </div>
+              <img class="logo" src="{{ charity?.fields.logo.fields.file.url }}">
+            </div>
+          </a>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

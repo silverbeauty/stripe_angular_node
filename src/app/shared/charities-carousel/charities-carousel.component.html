@@ -1,0 +1,29 @@
+<div class="text-center">
+  <h1 class="title">{{ carouselType }}</h1>
+</div>
+<div class="carousel-wrapper">
+  <a class="carousel-control-prev" role="button" (click)="charitiesCarousel.previousSlide()">
+    <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+  </a>
+  <div>
+    <mdb-carousel class="carousel-multi-item multi-animation" #charitiesCarousel
+      [isControls]="false"
+      [type]="'carousel-multi-item'"
+      [animation]="'slide'"
+      [interval]="'2000'">
+      <mdb-carousel-item *ngFor="let item of slides; let i = index">
+        <div class="col-md-2 col-sm-4" [ngClass]="{'d-none d-md-block': cardIndex !== 0}" *ngFor="let card of item; let cardIndex = index">
+          <mdb-card class="my-1">
+            <a [routerLink]="['/', card?.fields.slug]">
+                <mdb-card-img [src]="card?.fields.logo?.fields.file.url" alt="Card image cap"></mdb-card-img>
+            </a>
+            
+          </mdb-card>
+        </div>
+      </mdb-carousel-item>
+    </mdb-carousel>
+  </div>
+  <a class="carousel-control-next" role="button" (click)="charitiesCarousel.nextSlide()">
+    <span aria-hidden="true" class="carousel-control-next-icon"></span>
+  </a>
+</div>

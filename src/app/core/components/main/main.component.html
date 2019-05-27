@@ -1,0 +1,56 @@
+<main role="main">
+
+  <app-featured-carousel></app-featured-carousel>
+  
+  <section class="hero-sacrifice">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-8 offset-2 offset-sm-0 col-sm-5 col-lg-6">
+          <img src="../../assets/images/new_coffee_cup.jpg" class="img-fluid align-self-center">
+        </div>
+        <div class="col-12 col-sm-7 col-lg-6">
+          <h1>Small sacrifices, overtime, can make a big difference.</h1>
+          <p>The average cost of a cup of coffee ($3.94) can turn into a monthly donation of $118.20.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero-works">
+    <div class="container">
+      <div class="row align-items-center justify-content-end">
+        <div class="col-12 col-sm-6 col-xl-4">
+          <h1>How It Works</h1>
+          <p>Allgive has partnered with many local and national charitable organizations in virtually every category.</p>
+          <div class="button">Learn More</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero-charities">
+
+    <app-charities-carousel [carouselType]="carouselType"></app-charities-carousel>
+
+    <div *ngIf="carouselType === 'Available Charities'">
+      <div class="text-center">
+        <div class="view-all">
+          <a routerLink="/charities">View All Charities</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <app-testimonial-carousel></app-testimonial-carousel>
+
+  <section class="hero-adds">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col">
+          <h4>See How It All Can Add Up...</h4>
+          <p class="lead">The average cost of a daily cup of coffee can turn into $118 in 1 month</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
